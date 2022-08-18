@@ -1,0 +1,233 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PavatiList</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo col-md-12">
+            <div class="wrapper wrapper--w960 col-md-4">
+                <div class="card card-2">
+                    <div class="card-heading"></div>
+                    <div class="card-body">
+                        <center>
+                            <h6 class="title">|| पिंगळा देवी प्रसन्न ||</h6>
+                            <h2 class="multicolortext"><b> पिंगळा देवी संस्थान </b></h2>
+                            <p> नांदुरा, ता. जि. अमरावती, रं. नं. ऄ - २४९७ </p>
+                        </center><br />
+                        <form method="POST">
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <strong> नं. </strong>
+                                        <input type="text" name="Number">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <strong> दि.</strong>
+                                        <input type="date" name="Date" id="txtDate">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <strong> श्री/श्रीमती </strong>
+                                <input class="input" type="text" name="Name" id="txtName" onclick="record()">
+                            </div>
+                            <div class="input-group">
+                                <strong> मोबा. नं. </strong>
+                                <input class="input" type="number" name="MobileNo" id="txtMobileno" onclick="record1()">
+                            </div>
+                            <p class="para"> आपणाकडून पिंगळा देवी संस्थान करिता देणगी </p><br />
+
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <strong> अक्षरी रु. </strong>
+                                        <input class="input" type="text" name="PaymentInWord" id="txtPaymentInWord" onclick="record2()">
+
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <p class="para"> नगदी मिळाले. </p><br />
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <input style="border-radius:10px;" class="form-control" type="number" name="PayementInNo" id="txtPaymentInNo" onclick="record3()" />@*<span class="input-group-addon"><i class="fas fa-rupee-sign"></i></span>*@
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <p class="para"> देणगीदाता </p>
+                                </div>
+
+                            </div>
+                            <div class="p-t-10">
+                                <center>
+                                    <button class="btn btn--radius btn--green" type="submit" onclick="savePavati()">Submit</button>
+                                </center>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper wrapper--w960 col-md-8" id="didID">
+                <div class="card card-2">
+                    <div class="card-heading"></div>
+                    <div class="card-body">
+                        <div class="row row-space">
+                            <div class="col-1">
+                                <img src="~/Assets/images/pingladevi.jpeg" class="img-circle" style="width: 100px; height: 100px" />
+                            </div>
+                            <div class="col-6">
+                                <center>
+                                    <h6 class="title">|| पिंगळा देवी प्रसन्न ||</h6>
+                                    <h1 class="title"> पिंगळा देवी संस्थान </h1>
+                                    <p>
+                                        नांदुरा, ता. जि. अमरावती, रं. नं. ऄ - २४९७ <br />
+                                        ऑनलाईन पेमेंट करिता website: pingladevi.online<br />
+                                        <lable> Mail id: pingladevivisansthan@gmail.com </lable>
+                                    </p>
+                                </center>
+                            </div>
+                            <div class="col-1 para">
+                                <span> Mob. 7620862399<br /> 8600002513</span>
+                            </div>
+                        </div>
+
+                        <form method="POST">
+                            <div class="row row-space">
+                                <div class="2">
+                                    <div class="input-group">
+                                        <strong> नं.</strong>
+                                        <input type="text" name="Number">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="input-group">
+                                        <strong class="two">देणगी पावती</strong>
+                                    </div>
+                                </div>
+                                <div class="2">
+                                    <div class="input-group">
+                                        <strong> दि.</strong>
+                                        <input type="date" name="date" id="txtDate" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <strong> श्री/श्रीमती </strong><br />
+                                <label class="input" id="txtnamesame"></label>
+                            </div>
+                            <div class="input-group">
+                                <strong> मोबा. नं. </strong><br />
+                                <label class="input" id="txtmobilenosame"></label>
+                            </div>
+                            <p class="para"> आपणाकडून पिंगळा देवी संस्थान करिता देणगी </p><br />
+
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <strong> अक्षरी रु. </strong><br />
+                                        <label class="input" id="txtpaymentinwordsame"></label>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <p class="para"> नगदी मिळाले. </p><br />
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label style="border-radius:10px;" class="input" id="txtpaymentinnosame"></label>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <span>धन्यवाद !</span>
+                                </div>
+                                <div class="col-2">
+                                    <p class="para">प्राप्तकर्ता</p>
+                                </div>
+                            </div>
+                            <div class="p-t-10">
+                                <center>
+                                    <button type="button" id="printButton" class="btn btn-primary hidden-print" onclick="printDiv('didID')"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>Print</button>
+                                </center>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Jquery JS-->
+    <script src="~/Assets/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="~/Assets/vendor/select2/select2.min.js"></script>
+    <script src="~/Assets/vendor/datepicker/moment.min.js"></script>
+    <script src="~/Assets/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="~/Assets/js/global.js"></script>
+
+
+
+    @*<table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mobileno)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaymentInWord)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaymentInNo)
+                </th>
+                <th></th>
+            </tr>
+
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mobileno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentInWord)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentInNo)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                </td>
+            </tr>
+        }
+
+        </table>*@
+</body>
+</html>

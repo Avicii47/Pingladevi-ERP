@@ -1,0 +1,98 @@
+﻿@using Pingladevi.Models;
+@model Loginmodel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Content/jquery-confirm-master/js/jquery-confirm.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Login.css" rel="stylesheet" />
+    <style>
+        #background {
+            background-color: #e9e3e3;
+        }
+    </style>
+</head>
+<body>
+    @*<div id="background">
+        <div class="container">
+            <div class="row h-100">
+                <div class="col-sm-12 my-auto">
+                    <div class="col-md-6 col-sm-3">
+                        <img src="~/Assets/images/pingladevi.jpeg" width="550" height="700" />
+                    </div>
+                    <div class="card card-block w-25">
+
+                        <div class="text-center">
+                            <h2>Login Page</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-3">*@
+    <div id="background">
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        @if (@ViewBag.Message != null)
+        {
+            <div class="form-group">
+                @ViewBag.Message
+            </div>
+        }
+
+
+        <div class="parent clearfix">
+            <div class="bg-illustration">
+                <img src="~/Assets/images/pingladevi.jpeg" alt="logo">
+
+                <div class="burger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <div class="login">
+                <div class="container">
+                    <h1><center>पिंगळा देवी</center></h1><h3><center>||प्रसन्न||</center></h3>
+                    <h2>Login Page</h2>
+
+                    @using (Html.BeginForm("LoginIn", "Login", FormMethod.Post))
+                    {
+                        <br />
+                        <h4> @Html.LabelFor(a => a.UserName)</h4>
+                        <div>
+                            @Html.TextBoxFor(a => a.UserName, new { @maxlength = "10", @size = "10", @class = "form-control" })
+                            @Html.ValidationMessageFor(a => a.UserName)
+
+                        </div>
+                        <br />
+                        <h4>
+                            @Html.LabelFor(a => a.Password)
+                        </h4>
+                        <div>
+                            @Html.PasswordFor(a => a.Password, new { @class = "form-control" })
+                        </div>
+                        <br />
+                        <input type="submit" value="Login" class="btn btn-info" />
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+

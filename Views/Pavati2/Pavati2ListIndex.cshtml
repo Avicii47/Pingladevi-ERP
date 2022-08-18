@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Pavati2ListIndex";
+}
+
+<script src="~/Content/Pages/jquery-1.11.1.min.js"></script>
+<script src="~/Content/Pages/Pavati2.js"></script>
+<div class="col-sm-8">
+    <h2><center>इतर यादी</center></h2>
+
+    <br />
+
+    <label><h4>FromDate</h4></label>
+    <input id="txtfromdate" type="date" />
+   
+
+    <label><h4>ToDate</h4></label>
+    <input id="txttodate" type="date" />
+
+    
+   
+
+        <input id="btnSearch" type="button" value="Search" class="btn btn-info" onclick="getPavati2List()" />
+  
+</div>
+    <div class="col-md-8">
+    <table id="Tbl_Pavati2" border="1" class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th bgcolor="orange">Id</th>
+                <th bgcolor="orange">Date</th>
+                <th bgcolor="orange">Name</th>
+                <th bgcolor="orange">Mobileno</th>
+                <th bgcolor="orange">Category</th>
+                <th bgcolor="orange">SubCategory</th>
+                <th bgcolor="orange">Unit</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    </div>
+
+   
+<style>
+
+    .ui-autocomplete {
+        max-height: 300px;
+        max-width: 500px;
+        overflow-y: auto; /* prevent horizontal scrollbar */
+        overflow-x: hidden; /* add padding to account for vertical scrollbar */
+        z-index: 9999 !important;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        list-style-type: none;
+    }
+
+        .ui-autocomplete > li {
+            line-height: 21px;
+            border-bottom: 1px solid;
+        }
+
+    #divSearchBox .input-search .form-control {
+        border-radius: 0px !important;
+        margin-top: 5px !important;
+    }
+
+    .ui-autocomplete > li:hover {
+        background-color: #38A1F3;
+        color: white;
+    }
+
+    #divSearchBox .input-search .input-search-icon {
+        left: 0px !important;
+    }
+
+    #divSearchBox .input-search .input-search-icon, .input-search .input-search-close {
+        top: 54% !important;
+    }
+</style>
+

@@ -1,0 +1,171 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<script src="~/Content/jquery-3.3.1.js"></script>
+@*<script src="~/Content/Pages/jquery-1.11.1.min.js"></script>*@
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Content/Dagine.js"></script>
+<h2>Index</h2>
+
+<body>
+    <div class="container bootdey">
+        <div class="row invoice row-printable">
+            <div class="col-md-3">
+                <!-- col-lg-6 start here -->
+                <div class="panel panel-default plain" id="dash_0" style="margin-top: 10px;">
+                    <!-- Start .panel -->
+                    <div class="panel-body p30">
+                        <div class="row">
+                            <!-- Start .row -->
+                            <div class="col-md-8">
+                                <label id="hdnid" />
+                                दिनांक <br>
+                                <input type="date" id="TxtDate" /><br>
+                                नाव
+                                <input id="TxtName" type="text" /><br>
+                                गांव
+                                <input id="TxtCity" type="text" /><br>
+                                पत्ता
+                                <input id="TxtAddress" type="text" /><br>
+                                मो.
+                                <input id="TxtMobile" type="text" /><br>
+                                विवरण
+                                <input id="TxtItem" type="text" /><br>
+                                नग
+                                <input id="TxtQuantity" type="text" /><br>
+                                वजन
+                                <input id="TxtWeight" type="text" /><br>
+                                दर प्रति ग्राम
+                                <input id="TxtPerGramRate" type="text" /><br>
+                                एकूण
+                                <input id="TxtTotal" type="text" /><br>
+                                <center><input id="BtnSave" type="button" class="btn btn-success" value="SAVE" onclick="savedata()" /></center>
+                                @*<input id="BtnSave" type="button" value="SAVE" onclick="savedata()" />*@
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="wrapper wrapper--w960 col-md-9" id="didID">
+                    <div class="container bootdey" width:100px>
+                        <div class="row invoice row-printable">
+                            <div class="col-md-8">
+                                <!--col-lg-12 start here-->
+                                <div class="panel panel-default plain" id="dash_0">
+                                    <!--Start .panel-->
+                                    <div class="panel-body p30">
+                                        <div class="row">
+                                            <!--Start .row-->
+                                            <div class="col-lg-2">
+                                                <!--col-lg-4 start here-->
+                                                <div class="invoice-logo">
+                                                    <img src="~/Image/pingladevi.jpeg" alt="Invoice logo" width="100" />
+                                                </div>
+                                            </div>
+                                            <!--col-lg-4 end here-->
+                                            <div class="col-lg-10">
+                                                <!--col-lg-8 start here-->
+                                                <div class="row">
+                                                    <center><h2 class="box-title" style="font-size:30px">पिंगळा देवी संस्थान (गढ ) </h2></center>
+                                                    <center><h1 class="box-title" style="font-size:10px">नांदुरा पिंगळाई ता. जी अमरावती   रजि . नं.२४९७ </h1></center>
+                                                    <center><h1 class="box-title" style="font-size:10px">www.pingladevi.org </h1></center>
+                                                </div>
+                                            </div>
+                                            <!--col-lg-8 end here-->
+                                            <div class="col-lg-12">
+                                                <!--col-lg-12 start here-->
+                                                <div class="col-sm-12">
+                                                    <div class="row" style="border:solid;" width="10%"></div>
+                                                    <br>
+                                                    <div class="row">
+                                                        <div class="container-fluid">
+                                                            <div class="col-sm-8">
+                                                                RECIPT
+                                                                <label id="TxtReciptNo" />
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                दि:-
+                                                                <label id="Date1" />
+                                                            </div>
+                                                        </div>
+                                                    </div><br>
+
+                                                    <div class="row">
+                                                        <div class="container-fluid">
+                                                            <div class="col-lg-6">
+                                                                नाव
+                                                                <label id="TxtName1" />
+                                                            </div>
+                                                        </div>
+                                                    </div><br>
+
+                                                    <div class="row">
+                                                        <div class="container-fluid">
+                                                            <div class="col-md-4">
+                                                                पत्ता
+                                                                <label id="TxtAddress1" />
+                                                            </div>
+                                                        </div>
+                                                    </div><BR>
+
+                                                    <div class="row">
+                                                        <div class="container-fluid">
+                                                            <div class="col-md-4">
+                                                                मो.
+                                                                <label id="TxtMob1" />
+                                                            </div>
+                                                        </div>
+                                                    </div><br>
+
+                                                    <div class="line-items">
+                                                        <div class="headers clearfix">
+                                                            <div class="row">
+                                                                @*<div class="col-sm-1">अ. क्र.</div>*@
+                                                                <div class="col-sm-4"><strong>विवरण </strong><br><label id="TxtItem1" /></div>
+                                                                <div class="col-sm-2"><strong>नग</strong><br><label id="TxtQuantity1" /></div>
+                                                                <div class="col-sm-2"><strong>वजन</strong><br><label id="TxtWeight1" /> </div>
+                                                                <div class="col-sm-2"><strong>दर प्रति ग्राम</strong><br><label id="TxtPerGramRate1" /> </div>
+                                                                <div class="col-sm-2"><strong>एकूण</strong><br><label id="TxtTotal1" /> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <center><button type="button" id="printButton" class="btn btn-primary hidden-print" onclick="printDiv('didID')"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>Print</button></center>
+                                                    <br>
+
+                                                    <div class="row">
+                                                        <div class="container-fluid">
+                                                            <div class="col-md-6">
+                                                                देणाऱ्याची सही
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                घेणाऱ्याची सही
+                                                            </div>
+                                                        </div>
+                                                    </div><br>
+
+                                                </div>
+                                                <!--End .row-->
+                                            </div>
+                                        </div>
+                                        <!--End .panel-->
+                                    </div>
+                                    <!--col-lg-12 end here-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>

@@ -1,0 +1,243 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+
+    <script src="~/Content/Pages/Pavati1.js"></script>
+    <style>
+        #borderimg {
+            border: 150px,solid;
+            padding: 50px;
+            background-size: initial;
+            background-repeat: round;
+            background-image: url('../../Content/frame-border-certificate-vintage-ornament-suitable-achievement-education-awards-wedding-85701191-removebg-preview.png');
+        }
+    </style>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Pingladevi</title>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+    @*<script src="~/Content/Pages/jquery-1.11.1.min.js"></script>*@
+    <script src="~/Content/Pages/Pavati.js"></script>
+
+
+    <!-- Icons font CSS-->
+    <link href="~/Assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="~/Assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="~/Assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="~/Assets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="~/Assets/css/main.css" rel="stylesheet" media="all">
+
+
+
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo col-md-12">
+            <div class="wrapper wrapper--w960 col-md-4">
+                <div class="card card-2">
+                    <div class="card-heading"></div>
+                    <div class="card-body">
+                        <center>
+                            <h6 class="title">|| पिंगळा देवी प्रसन्न ||</h6>
+                            <h2 class="multicolortext"><b> पिंगळा देवी संस्थान </b></h2>
+                            <p> नांदुरा, ता. जि. अमरावती, रं. नं. ऄ - २४९७ </p>
+                        </center><br />
+                        <div>
+                            <div class="row row-space">
+                                <div class="col-2">
+
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <strong> दि.</strong>
+                                        <input type="date" name="Date" id="txtDate">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <strong> श्री/श्रीमती </strong>
+                                <input class="input" type="text" name="Name" id="txtName" onclick="record()">
+                            </div>
+                            <div class="input-group">
+                                <strong> मोबा. नं. </strong>
+                                <input class="input" type="number" name="MobileNo" id="txtMobileno" onclick="record1()">
+                            </div>
+                            <p class="para"> आपणाकडून पिंगळा देवी संस्थान करिता देणगी </p><br />
+
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <strong> अक्षरी रु. </strong>
+                                        <input class="input" type="text" name="PaymentInWord" id="txtPaymentInWord" onclick="record2()">
+
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <p class="para"> नगदी मिळाले. </p><br />
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <input style="border-radius:10px;" class="form-control" type="number" name="PayementInNo" id="txtPaymentInNo" onclick="record3()">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <p class="para"> देणगीदाता </p>
+                                </div>
+
+                            </div>
+                            <div class="p-t-10">
+                                <center>
+                                    <button class="btn btn--radius btn--green" type="submit" onclick="savePavati()">Submit</button>
+                                    <a href="~/Pavati/ListIndex" class="btn btn-outline-success btn--green">back</a>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper wrapper--w960 col-md-8" id="didID">
+                <div id="borderimg">
+                    <div class="card card-2">
+                        <div class="card-heading"></div>
+                        <div class="card-body">
+                            <div class="row row-space">
+                                <div class="col-1">
+                                    <img src="~/Assets/images/pingladevi.jpeg" class="img-circle" style="width: 100px; height: 100px" />
+                                </div>
+                                <div class="col-6">
+                                    <center>
+                                        <h6 class="title">|| पिंगळा देवी प्रसन्न ||</h6>
+                                        <h1 class="title"> पिंगळा देवी संस्थान </h1>
+                                        <p>
+                                            नांदुरा, ता. जि. अमरावती, रं. नं. ऄ - २४९७ <br />
+                                            ऑनलाईन पेमेंट करिता website: pingladevi.online<br />
+                                            <lable> Mail id: pingladevivisansthan@gmail.com </lable>
+                                        </p>
+                                    </center>
+                                </div>
+                                <div class="col-1 para">
+                                    <span> Mob. 7620862399<br /> 8600002513</span>
+                                </div>
+                            </div>
+
+                            <div class="row row-space">
+                                <div class="2">
+                                    <div class="input-group">
+                                        <strong> नं.</strong>
+                                        <label type="text" name="Number" id="txtId" />
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="input-group">
+                                        <strong class="two">देणगी पावती</strong>
+                                    </div>
+                                </div>
+                                <div class="2">
+                                    <div class="input-group">
+                                        <strong> दि.</strong>
+                                        <input type="text" name="date" id="txtDate" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <strong> श्री/श्रीमती </strong><br />
+                                <label id="txtnamesame"></label>
+                            </div>
+                            <div class="input-group">
+                                <strong> मोबा. नं. </strong><br />
+                                <label class="input" id="txtmobilenosame"></label>
+                            </div>
+                            <p class="para"> आपणाकडून पिंगळा देवी संस्थान करिता देणगी </p><br />
+
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <strong> अक्षरी रु. </strong><br />
+                                        <label class="input" id="txtpaymentinwordsame"></label>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <p class="para"> नगदी मिळाले. </p><br />
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label style="border-radius:10px;" class="input" id="txtpaymentinnosame"></label>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <span>धन्यवाद !</span>
+                                </div>
+                                <div class="col-2">
+                                    <p class="para">प्राप्तकर्ता</p>
+                                </div>
+                            </div>
+                            <div class="p-t-10">
+                                <center>
+                                    <button type="button" id="printButton" class="btn btn-primary hidden-print" onclick="printDiv('didID')"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>Print</button>
+                                </center>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Jquery JS-->
+    <script src="~/Assets/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="~/Assets/vendor/select2/select2.min.js"></script>
+    <script src="~/Assets/vendor/datepicker/moment.min.js"></script>
+    <script src="~/Assets/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="~/Assets/js/global.js"></script>
+    <script language="javascript" type="text/javascript">
+        function printDiv(didID) {
+            var divElements = document.getElementById(didID).innerHTML;
+            //Get the HTML of whole page
+            var oldPage = document.body.innerHTML;
+            //Reset the page's HTML with div's HTML only
+            document.body.innerHTML =
+                "<html><head><title></title></head><body>" +
+                divElements + "</body>";
+            window.print();
+            recognition.onresult = function (event) {
+                console.log(event);
+                document.getElementById('printButton').value = event.results[0][0].transcript;
+            }
+            recognition.start();
+            document.body.innerHTML = oldPage;
+        }
+    </script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+<!-- end document-->

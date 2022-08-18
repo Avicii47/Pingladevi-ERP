@@ -1,0 +1,37 @@
+﻿@using Pingladevi.Models;
+@model Loginmodel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+</head>
+<body>
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @if (@ViewBag.Message != null)
+    {
+        <div class="form-group">
+            @ViewBag.Message
+        </div>
+        }
+    @using (Html.BeginForm("LoginIn", "Login", FormMethod.Post))
+    {
+        @Html.LabelFor(a => a.UserName)
+        <div>
+        @Html.TextBoxFor(a => a.UserName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.UserName)
+        </div>
+        @Html.LabelFor(a => a.Password)
+        <div>
+        @Html.PasswordFor(a => a.Password, new { @class = "form-control" })
+            </div>
+        <input type="submit" value="Login" class="btn btn-info" />
+    }
+    </body>
+</html>

@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+@*<script src="~/Content/Pages/jquery-1.11.1.min.js"></script>*@
+<script src="~/Content/AddItem.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<centre><h2>Add Item</h2>
+
+    <body>
+        <div class="container bootdey">
+            <div class="row invoice row-printable">
+                <div class="col-md-3">
+                    <div class="panel panel-default plain" id="dash_0">
+                        <div class="panel-body p30">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <label id="hdnid" />
+                                    नाव <br>
+                                    <input id="TxtName" type="text" /><br>
+                                    प्रति दिवस रेट
+                                    <input id="TxtPerdayRate" type="text" /><br>
+                                    उपलब्ध साठा<br>
+                                    <input id="TxtStock" type="text" /><br>
+                                    <div class="row">
+                                        <center><input id="BtnSave" type="button" class="btn btn-success" value="ADD ITEM" onclick="savedata()" /></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <table id="TblAddItem" border="1">
+                        <thead>
+                            <tr>
+                                <th bgcolor="orange">ItemNo </th>
+                                <th bgcolor="orange">Name </th>
+                                <th bgcolor="orange">Perday Rate </th>
+                                <th bgcolor="orange">Avaiable Stock </th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+    </body>
+    </centre>>
